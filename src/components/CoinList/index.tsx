@@ -4,9 +4,10 @@ import styles from './styles';
 
 interface CoinListProps {
   coins: string[];
+  onCoinSelect?: (coin: string) => void;
 }
 
-const CoinList = ({coins}: CoinListProps) => {
+const CoinList = ({coins, onCoinSelect}: CoinListProps) => {
   return (
     <FlatList
       bounces={false}
@@ -15,7 +16,10 @@ const CoinList = ({coins}: CoinListProps) => {
       style={styles.content}
       showsVerticalScrollIndicator={false}
       renderItem={({item}) => (
-        <TouchableOpacity activeOpacity={0.7} style={styles.item}>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => onCoinSelect && onCoinSelect(item)}
+          style={styles.item}>
           <Text style={styles.title}>{item}</Text>
         </TouchableOpacity>
       )}
