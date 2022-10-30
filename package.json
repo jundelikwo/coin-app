@@ -13,6 +13,7 @@
     "e2e:test": " npx detox test --configuration ios"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.10",
     "axios": "^0.27.2",
     "react": "18.1.0",
     "react-native": "0.70.4"
