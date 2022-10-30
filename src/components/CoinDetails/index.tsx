@@ -46,9 +46,8 @@ const CoinDetails = ({coin, rate, height, forwardedRef}: CoinDetailsProp) => {
 };
 
 CoinDetails.defaultProps = {
-  title: '',
-  height: 300,
-  onOpen: () => null,
+  coin: '',
+  rate: '',
 };
 
 export default CoinDetails;
