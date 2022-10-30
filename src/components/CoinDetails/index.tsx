@@ -20,14 +20,15 @@ const CoinDetails = ({coin, rate, height, forwardedRef}: CoinDetailsProp) => {
       customStyles={{
         container: styles.bottomSheetContainer,
       }}>
-      <View style={styles.container}>
+      <View testID="coin-details" style={styles.container}>
         <Text style={styles.header}>Coin Details</Text>
         <TouchableOpacity
+          testID="coin-details-close"
           activeOpacity={0.6}
           onPress={() => forwardedRef?.current.close()}
           style={styles.cancelBtn}>
           <Image
-            source={require('src/assets/images/back.png')}
+            source={require('src/assets/images/close.png')}
             style={styles.image}
           />
         </TouchableOpacity>

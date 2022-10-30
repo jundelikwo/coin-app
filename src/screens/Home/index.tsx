@@ -30,9 +30,10 @@ export const Home = ({rates}: HomeProps) => {
   return (
     <Fragment>
       <Header title="Home" />
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView testID="home-screen" style={styles.container}>
         <View style={styles.search}>
           <SearchInput
+            testID="search-input"
             autoComplete="off"
             autoCapitalize="none"
             autoCorrect={false}
