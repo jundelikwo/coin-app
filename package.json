@@ -13,6 +13,7 @@
     "e2e:test": " npx detox test --configuration ios"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "react": "18.1.0",
     "react-native": "0.70.4"
   },
