@@ -11,7 +11,7 @@ import renderer from 'react-test-renderer';
 
 describe('Home', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<Home />).toJSON();
+    const tree = renderer.create(<Home rates={{}} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
